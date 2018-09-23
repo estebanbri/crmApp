@@ -11,6 +11,8 @@
 
 Bienvenido ${param.clienteNameFieldForm}
 
+Su mensaje es: ${mensajeAtributo}
+
 
 </body>
 </html>

@@ -14,5 +14,11 @@ Ingresa tu nombre:
 	<input type="submit"/>
 </form>
 
+Ingresa tu mensaje:
+<form action="processFormUpperCase" method=GET>
+	<input type="text" name="clienteNameFieldForm">
+	<input type="submit"/>
+</form>
+
 </body>
 </html>
