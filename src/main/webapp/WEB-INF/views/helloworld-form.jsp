@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>    
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,6 +22,12 @@ Ingresa tu mensaje:
 	<input type="text" name="clienteNameFieldForm">
 	<input type="submit"/>
 </form>
+
+Ingresa tu mensaje:
+<form:form action="processFormInstanciarClienteUpperCase" modelAttribute="cliente">
+	<form:input path="primerNombre"/>
+	<input type="submit"/>
+</form:form>
 
 </body>
 </html>

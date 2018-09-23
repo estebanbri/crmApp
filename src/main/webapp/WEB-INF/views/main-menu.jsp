@@ -10,7 +10,10 @@
 
 Main Menu
 <br>
-<a href="showForm"> Ir al Formulario </a>
+<a href="showForm"> Ir al Formulario basico </a>
+
+<br>
+<a href="processFormInstanciarCliente"> Ir al Formulario que usa Model object </a>
 
 </body>
 </html>
