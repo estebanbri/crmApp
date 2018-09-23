@@ -4,13 +4,15 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Main Menu</title>
+<title>Hello World Form</title>
 </head>
 <body>
 
-Main Menu
-<br>
-<a href="showForm"> Ir al Formulario </a>
+Ingresa tu nombre:
+<form action="processForm" method=GET>
+	<input type="text" name="clienteNameFieldForm">
+	<input type="submit"/>
+</form>
 
 </body>
 </html>
