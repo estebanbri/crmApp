@@ -6,12 +6,12 @@ public class MiSpringMvcDispatcherServletInitializer extends AbstractAnnotationC
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return null;
+    	return null;
     }
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class<?>[] { AppConfiguration.class };
+        return new Class<?>[] {PersistenceConfiguration.class, AppConfiguration.class};
     }
 
     @Override

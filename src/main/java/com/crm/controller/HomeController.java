@@ -8,7 +8,7 @@ public class HomeController {
 	
 	@GetMapping("/")
 	public String showMyPage() {
-		return "main-menu";
+		return "pagina-bienvenida";
 	}
-
+	
 }

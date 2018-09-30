@@ -9,11 +9,7 @@
 <body>
 
 Main Menu
-<br>
-<a href="showForm"> Ir al Formulario basico </a>
-
-<br>
-<a href="processFormInstanciarCliente"> Ir al Formulario que usa Model object </a>
+<a href="${pageContext.request.contextPath}/cliente/listar">Obtener todos los clientes</a>
 
 </body>
 </html>
