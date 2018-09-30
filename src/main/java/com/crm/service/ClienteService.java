@@ -29,5 +29,10 @@ public class ClienteService {
 	public Cliente getCliente(int idCliente) {
 		return clienteDao.getCliente(idCliente);
 	}
+	
+	@Transactional
+	public void deleteCliente(int idCliente) {
+		clienteDao.deleteCliente(idCliente);
+	}
 
 }

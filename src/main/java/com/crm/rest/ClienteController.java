@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -54,6 +55,13 @@ public class ClienteController {
 	@PutMapping("/clientes")
 	public Cliente actualizarCliente(@RequestBody Cliente cliente) { 
 		return clienteService.saveOrUpdateCliente(cliente);
+	}
+	
+	//Endpoint para "/clientes/{idCliente}" - DELETE -  elimina un cliente por id
+	@DeleteMapping("/clientes/{idCliente}")
+	public String borrarCliente(@PathVariable int idCliente) { 
+		clienteService.deleteCliente(idCliente);
+		return "Cliente borrado de la base de datos - " + idCliente;
 	}
 	
 	

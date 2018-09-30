@@ -34,5 +34,13 @@ public class ClienteDaoImpl implements ClienteDao {
 		Cliente cliente = session.get(Cliente.class, idCliente);
 		return cliente;
 	}
+	
+	public void deleteCliente(int idCliente) {
+		Session session = sessionFactory.getCurrentSession();
+		// delete object with primary key
+		Query query = session.createQuery("delete from Cliente where idCliente=:idCliente");
+		query.setParameter("idCliente", idCliente);
+		query.executeUpdate();	;
+	}
 
 }

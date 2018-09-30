@@ -11,4 +11,6 @@ public interface ClienteDao {
 	public List<Cliente> getClientes();
 	
 	public Cliente getCliente(int idCliente);
+	
+	public void deleteCliente(int idCliente);
 }
