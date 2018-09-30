@@ -54,15 +54,28 @@ public class ClienteController {
 	}
 	
 	@ExceptionHandler
-	public ResponseEntity<ClienteErrorResponse> handleException(ClienteNotFoundException e){
-		ClienteErrorResponse errorResponse= new ClienteErrorResponse().builder()
-												.status(HttpStatus.NOT_FOUND.value())
-												.mensaje(e.getMessage())
-												.timestamp(System.currentTimeMillis())
-												.build();
+	public ResponseEntity<ClienteErrorResponse> handleException(Exception e){
 		
-		return new ResponseEntity<ClienteErrorResponse>(errorResponse, HttpStatus.NOT_FOUND);
+		if(e instanceof ClienteNotFoundException) {
+			ClienteErrorResponse errorResponse= new ClienteErrorResponse().builder()
+													.status(HttpStatus.NOT_FOUND.value())
+													.mensaje(e.getMessage())
+													.timestamp(System.currentTimeMillis())
+													.build();
 			
+			return new ResponseEntity<ClienteErrorResponse>(errorResponse, HttpStatus.NOT_FOUND);
+		}
+		
+		
+		ClienteErrorResponse errorResponse= new ClienteErrorResponse().builder()
+													.status(HttpStatus.BAD_REQUEST.value())
+													.mensaje(e.getMessage())
+													.timestamp(System.currentTimeMillis())
+													.build();
+			
+		return new ResponseEntity<ClienteErrorResponse>(errorResponse, HttpStatus.BAD_REQUEST);
+		
+		
 	}
 
 }
