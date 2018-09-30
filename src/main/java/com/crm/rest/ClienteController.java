@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.crm.entity.Cliente;
-import com.crm.entity.ClienteErrorResponse;
-import com.crm.entity.ClienteNotFoundException;
 import com.crm.service.ClienteService;
 
 

@@ -1,4 +1,4 @@
-package com.crm.entity;
+package com.crm.rest;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableWebMvc
 @EnableTransactionManagement
-@ComponentScan(basePackages = {"com.crm.controller","com.crm.service"}) //defino el package-name donde quiero que scanee para encontrar mis @Components (y sus hijos como @Controller por ej) y automaticamente registrarlos como beans en el spring-container.
+@ComponentScan(basePackages = {"com.crm.rest","com.crm.service"}) //defino el package-name donde quiero que scanee para encontrar mis @Components (y sus hijos como @Controller por ej) y automaticamente registrarlos como beans en el spring-container.
 @PropertySource("classpath:application.properties")
 public class AppConfiguration {
 

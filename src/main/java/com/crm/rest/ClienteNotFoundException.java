@@ -1,4 +1,4 @@
-package com.crm.entity;
+package com.crm.rest;
 
 public class ClienteNotFoundException extends RuntimeException {
 	/**
