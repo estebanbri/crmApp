@@ -1,4 +1,4 @@
-package com.crm.controller;
+package com.crm.rest;
 
 import java.util.List;
 
