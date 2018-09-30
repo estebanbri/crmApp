@@ -9,6 +9,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.crm.entity.Cliente;
@@ -22,20 +24,13 @@ public class ClienteController {
 	@Autowired
 	ClienteService clienteService;
 	
-	@GetMapping("/crear")
-	public String crearCliente(Model model) {
-		Cliente cliente = crearCliente("Jose");
-		clienteService.setCliente(cliente);
-		return "crear-cliente";
-	}
-	
-	//Endpoint para "/clientes" - retorna lista de clientes
+	//Endpoint para "/clientes" - GET -  retorna lista de clientes
 	@GetMapping("/clientes")
 	public List<Cliente> getClientes() {
 		return clienteService.getClientes();
 	}
 	
-	//Endpoint para "/clientes/{idCliente}" - retorna cliente por id
+	//Endpoint para "/clientes/{idCliente}" - GET -  retorna un cliente por id
 	@GetMapping("/clientes/{idCliente}")
 	public Cliente getClientePorId(@PathVariable int idCliente) {
 		Cliente cliente = clienteService.getCliente(idCliente);
@@ -45,10 +40,11 @@ public class ClienteController {
 		return cliente ;
 	}
 	
-	public static Cliente crearCliente(String primerNombre) {
-		return Cliente.builder()
-				.primerNombre(primerNombre)
-				.build();
+	//Endpoint para "/clientes" - POST -  crea un cliente
+	@PostMapping("/clientes")
+	public Cliente crearCliente(@RequestBody Cliente cliente) {
+		return clienteService.setCliente(cliente);
 	}
+	
 	
 }
