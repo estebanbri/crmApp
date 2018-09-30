@@ -16,9 +16,9 @@ public class ClienteDaoImpl implements ClienteDao {
 	@Autowired
 	private SessionFactory sessionFactory;
 
-	public Cliente setCliente(Cliente cliente) {
+	public Cliente saveOrUpdateCliente(Cliente cliente) {
 		Session session = sessionFactory.getCurrentSession();
-		session.save(cliente);
+		session.saveOrUpdate(cliente);
 		return cliente;
 	}
 

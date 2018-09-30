@@ -6,7 +6,7 @@ import com.crm.entity.Cliente;
 
 public interface ClienteDao {
 	
-	public Cliente setCliente(Cliente cliente);
+	public Cliente saveOrUpdateCliente(Cliente cliente);
 
 	public List<Cliente> getClientes();
 	

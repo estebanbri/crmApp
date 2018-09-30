@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -43,7 +44,16 @@ public class ClienteController {
 	//Endpoint para "/clientes" - POST -  crea un cliente
 	@PostMapping("/clientes")
 	public Cliente crearCliente(@RequestBody Cliente cliente) {
-		return clienteService.setCliente(cliente);
+		//Tambien en caso de que pases un id en JSON.. setea el id a 0
+		//esto fuerza a que se aplique el save .. en vez de un update
+		cliente.setIdCliente(0);
+		return clienteService.saveOrUpdateCliente(cliente);
+	}
+	
+	//Endpoint para "/clientes" - PUT -  actualiza un cliente
+	@PutMapping("/clientes")
+	public Cliente actualizarCliente(@RequestBody Cliente cliente) { 
+		return clienteService.saveOrUpdateCliente(cliente);
 	}
 	
 	

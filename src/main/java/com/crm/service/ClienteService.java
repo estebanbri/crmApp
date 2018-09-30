@@ -16,8 +16,8 @@ public class ClienteService {
 	ClienteDao clienteDao;
 	
 	@Transactional
-	public Cliente setCliente(Cliente cliente) {
-		return clienteDao.setCliente(cliente);
+	public Cliente saveOrUpdateCliente(Cliente cliente) {
+		return clienteDao.saveOrUpdateCliente(cliente);
 	}
 	
 	@Transactional
