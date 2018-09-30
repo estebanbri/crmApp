@@ -24,5 +24,10 @@ public class ClienteService {
 	public List<Cliente> getClientes() {
 		return clienteDao.getClientes();
 	}
+	
+	@Transactional
+	public Cliente getCliente(int idCliente) {
+		return clienteDao.getCliente(idCliente);
+	}
 
 }

@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Lista Clientes</title>
+<title>Success</title>
 </head>
 <body>
 
-<h3>Lista Clientes</h3>
+<h3>Cliente creado con exito!</h3>
 
 </body>
 </html>

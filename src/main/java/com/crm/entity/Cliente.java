@@ -7,12 +7,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
-import lombok.NonNull;
+import lombok.NoArgsConstructor;
 
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "CLIENTE")
-@Data public class Cliente {
+public class Cliente {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,7 +26,6 @@ import lombok.NonNull;
 	private int idCliente;
 	
 	@Column(name="PRIMER_NOMBRE")
-	@NonNull
 	private String primerNombre;
 
 }

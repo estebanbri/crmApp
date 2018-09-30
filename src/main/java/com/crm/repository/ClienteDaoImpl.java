@@ -28,4 +28,10 @@ public class ClienteDaoImpl implements ClienteDao {
 		return clientes;
 	}
 
+	public Cliente getCliente(int idCliente) {
+		Session session = sessionFactory.getCurrentSession();
+		Cliente cliente = session.get(Cliente.class, idCliente);
+		return cliente;
+	}
+
 }

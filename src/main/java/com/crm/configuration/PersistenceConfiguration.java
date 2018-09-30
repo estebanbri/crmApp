@@ -25,6 +25,7 @@ public class PersistenceConfiguration {
 	@Autowired
 	private Environment env;
 	
+	//h2 console-> localhost:8082
     @Bean(initMethod="start",destroyMethod="stop")
     public org.h2.tools.Server h2WebConsoleServer () throws SQLException {
       return org.h2.tools.Server.createWebServer("-web","-webAllowOthers","-webDaemon","-webPort", "8082");

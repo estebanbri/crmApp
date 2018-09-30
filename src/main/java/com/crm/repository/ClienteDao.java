@@ -9,4 +9,6 @@ public interface ClienteDao {
 	public void setCliente(Cliente cliente);
 
 	public List<Cliente> getClientes();
+	
+	public Cliente getCliente(int idCliente);
 }
