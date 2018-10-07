@@ -113,7 +113,22 @@
 			<version>1.16.16</version>
 			<scope>provided</scope>
 		</dependency>
+		
+		<!-- Slf4j -->
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-api</artifactId>
+		    <version>1.7.25</version>
+		</dependency>
+		
+		<!-- Binding jar for SLF4J and log4j -->
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-log4j12</artifactId>
+		    <version>1.7.21</version>
+		</dependency>
 
+		
 	</dependencies>
 
 
