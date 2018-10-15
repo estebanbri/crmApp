@@ -4,3 +4,5 @@ Customer Relationship Management. Frameworks: Spring, Spring MVC, Hibernate, Fly
 
 http://localhost:8080/crmWebApp/swagger-ui.html
 
+
+![alt text](https://github.com/estebanbri/crmApp/blob/master/src/main/resources/img/swagger.png)
