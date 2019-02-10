@@ -145,6 +145,18 @@
 		
 	</dependencies>
 
+	<build>
+		<plugins>
+			<!-- Development Server: Jetty (Eclipse) -->
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+
+
 
 
 
